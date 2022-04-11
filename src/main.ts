@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Vue from "vue";
 import App from "./App.vue";
 import VueRouter from "vue-router";
@@ -17,7 +18,7 @@ let instance: any = null;
 function render(props = {}) {
   const { container } = props as any;
   router = new VueRouter({
-    base: (window as any).__POWERED_BY_QIANKUN__ ? "/app-vue2/" : "/",
+    base: (window as any).__POWERED_BY_QIANKUN__ ? "/sub-app2/" : "/",
     mode: "history",
     routes,
   });
