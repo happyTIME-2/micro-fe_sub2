@@ -3,6 +3,7 @@ const { defineConfig } = require("@vue/cli-service");
 const { name } = require("./package");
 
 module.exports = defineConfig({
+  publicPath: process.env.NODE_ENV === "production" ? "/sub-app2/" : "/",
   devServer: {
     headers: {
       "Access-Control-Allow-Origin": "*",
